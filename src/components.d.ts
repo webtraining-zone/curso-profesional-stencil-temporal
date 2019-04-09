@@ -40,15 +40,52 @@ export namespace Components {
     */
     'middle'?: string;
   }
+
+  interface WebBusinessCard {
+    'email': string;
+    'jobPosition': string;
+    'name': string;
+    'phone': string;
+    'website': string;
+  }
+  interface WebBusinessCardAttributes extends StencilHTMLAttributes {
+    'email'?: string;
+    'jobPosition'?: string;
+    'name'?: string;
+    'phone'?: string;
+    'website'?: string;
+  }
+
+  interface WebCountriesFinder {
+    'keyword': string;
+  }
+  interface WebCountriesFinderAttributes extends StencilHTMLAttributes {
+    'keyword'?: string;
+  }
+
+  interface WebComponentHello {
+    'firstName': string;
+    'websiteURL': string;
+  }
+  interface WebComponentHelloAttributes extends StencilHTMLAttributes {
+    'firstName'?: string;
+    'websiteURL'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'MyComponent': Components.MyComponent;
+    'WebBusinessCard': Components.WebBusinessCard;
+    'WebCountriesFinder': Components.WebCountriesFinder;
+    'WebComponentHello': Components.WebComponentHello;
   }
 
   interface StencilIntrinsicElements {
     'my-component': Components.MyComponentAttributes;
+    'web-business-card': Components.WebBusinessCardAttributes;
+    'web-countries-finder': Components.WebCountriesFinderAttributes;
+    'web-component-hello': Components.WebComponentHelloAttributes;
   }
 
 
@@ -58,12 +95,36 @@ declare global {
     new (): HTMLMyComponentElement;
   };
 
+  interface HTMLWebBusinessCardElement extends Components.WebBusinessCard, HTMLStencilElement {}
+  var HTMLWebBusinessCardElement: {
+    prototype: HTMLWebBusinessCardElement;
+    new (): HTMLWebBusinessCardElement;
+  };
+
+  interface HTMLWebCountriesFinderElement extends Components.WebCountriesFinder, HTMLStencilElement {}
+  var HTMLWebCountriesFinderElement: {
+    prototype: HTMLWebCountriesFinderElement;
+    new (): HTMLWebCountriesFinderElement;
+  };
+
+  interface HTMLWebComponentHelloElement extends Components.WebComponentHello, HTMLStencilElement {}
+  var HTMLWebComponentHelloElement: {
+    prototype: HTMLWebComponentHelloElement;
+    new (): HTMLWebComponentHelloElement;
+  };
+
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement
+    'web-business-card': HTMLWebBusinessCardElement
+    'web-countries-finder': HTMLWebCountriesFinderElement
+    'web-component-hello': HTMLWebComponentHelloElement
   }
 
   interface ElementTagNameMap {
     'my-component': HTMLMyComponentElement;
+    'web-business-card': HTMLWebBusinessCardElement;
+    'web-countries-finder': HTMLWebCountriesFinderElement;
+    'web-component-hello': HTMLWebComponentHelloElement;
   }
 
 

@@ -9,7 +9,38 @@
 </head>
 <body>
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+  <input type="text" class="js-trigger" value="co"/>
 
+  <h2>External Heading</h2>
+
+  <!--<web-countries-finder keyword="co" class="js-target-countries"></web-countries-finder>-->
+
+  <script>
+    (function() {
+      var $input = document.querySelector('.js-trigger');
+      var $countriesWebComponent = document.querySelector('.js-target-countries');
+
+      $input.addEventListener('input', function() {
+        console.log('keyword:', $input.value);
+
+        $countriesWebComponent.keyword = $input.value;
+      });
+    })();
+  </script>
+  <web-business-card
+  name="Esmeralda"
+  job-position="UX/UI Designer"
+  phone="2343524342"
+  email="esmeralda@mail.com"
+  website="esmeralda.com">
+  </web-business-card>
+
+  <!--<web-business-card-->
+  <!--name="David"-->
+  <!--job-position="Full-stack Developer"-->
+  <!--phone="2343524342"-->
+  <!--email="david@mail.com"-->
+  <!--website="david.com">-->
+  <!--</web-business-card>-->
 </body>
 </html>
