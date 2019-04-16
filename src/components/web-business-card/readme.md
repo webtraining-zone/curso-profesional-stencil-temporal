@@ -9,8 +9,11 @@
 
 | Property      | Attribute      | Description | Type     | Default     |
 | ------------- | -------------- | ----------- | -------- | ----------- |
+| `email`       | `email`        |             | `string` | `undefined` |
 | `jobPosition` | `job-position` |             | `string` | `undefined` |
 | `name`        | `name`         |             | `string` | `undefined` |
+| `phone`       | `phone`        |             | `string` | `undefined` |
+| `website`     | `website`      |             | `string` | `undefined` |
 
 
 ----------------------------------------------

@@ -1,7 +1,7 @@
 {
-  "name": "stencil-webtraining-components",
+  "name": "@alex-arriaga/stencil-webtraining-components",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "An example of web components library",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "unpkg": "dist/ionic.js",
